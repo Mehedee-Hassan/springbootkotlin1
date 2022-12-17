@@ -10,6 +10,6 @@ class GreetingService {
     lateinit var message: String
 
     fun greetingMessage(name :String) : String{
-        return "Hello $name $message\n"
+        return "$name, $message\n"
     }
 }
