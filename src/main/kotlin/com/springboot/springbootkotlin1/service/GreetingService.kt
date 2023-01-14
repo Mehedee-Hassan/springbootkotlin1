@@ -1,4 +1,4 @@
-package com.springboot.kotlin.test1.springbootkotlin1.service
+package com.springboot.springbootkotlin1.service
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
@@ -9,7 +9,7 @@ class GreetingService {
     @Value("\${message}")
     lateinit var message: String
 
-    fun greetingMessage(name :String) : String{
+    fun retrieveGreeting(name :String) : String{
         return "$name, $message\n"
     }
 }

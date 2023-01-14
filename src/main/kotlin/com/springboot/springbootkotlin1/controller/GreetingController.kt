@@ -1,6 +1,6 @@
-package com.springboot.kotlin.test1.springbootkotlin1.controller
+package com.springboot.springbootkotlin1.controller
 
-import com.springboot.kotlin.test1.springbootkotlin1.service.GreetingService
+import com.springboot.springbootkotlin1.service.GreetingService
 import mu.KLoggable
 import mu.KLogging
 import org.springframework.web.bind.annotation.GetMapping
@@ -15,7 +15,7 @@ class GreetingController (val greetingService: GreetingService){
     @GetMapping("/{name}")
     fun retrieveGreeting(@PathVariable("name") name: String): String{
         logger.info("name is $name")
-        return greetingService.greetingMessage(name)
+        return greetingService.retrieveGreeting(name)
 
     }
 }
